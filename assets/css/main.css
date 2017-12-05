@@ -52,7 +52,14 @@ a.navbar-brand{ color: #536c79;}
 
 /* nav side  */
 aside {margin-left:0;}
-.sidebar { width:220px;  background-color: #312f2c;transition: all 0.5s  ease-in-out; position: fixed; height: 100%;}
+.sidebar { width: 50px; background-color: #312f2c; transition: all 0.5s  ease-in-out; position: fixed; height: 100%;
+  transition-property: top,bottom, width;
+  -webkit-transition-duration: .2s,.2s, .35s;
+  transition-duration: .2s,.2s, .35s;
+  -webkit-transition-timing-function: linear,linear,ease;
+  transition-timing-function: linear,linear,ease;
+}
+.sidebar.active{width:220px;}
 .sidebar .nav { margin-top: 10px; flex-wrap: wrap;}
 .sidebar .nav { padding-left: 0; margin-bottom: 0; list-style: none;}
 .sidebar .nav:before { display: table; content: " "; }
