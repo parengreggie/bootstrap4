@@ -8,6 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
   </head>
@@ -25,7 +26,7 @@
         </div>
         <div class="menu">
           <a href="#"><i class="material-icons">&#xE871;</i> <span>Dashboard</span></a>
-          <a href="#">Services</a>
+          <a href="tables.html"><i class="fa fa-table fa-icons" aria-hidden="true"></i> <span>Tables </span></a>
           <a href="#">Clients</a>
           <a href="#">Contact</a>
         </div>
@@ -163,9 +164,13 @@
     <script>
       function toggleNav() {
         if ($('#sideNav').width() === 0 ){
+          // $("#sideNav").width( 260 );
+          // $("#main").css('margin-left',260+'px');
           document.getElementById("sideNav").style.width = "260px";
           document.getElementById("main").style.marginLeft = "260px";
         }else {
+          // $("#sideNav").width( 0 );
+          // $("#main").css('margin-left',0+'px');
           document.getElementById("sideNav").style.width = "0";
           document.getElementById("main").style.marginLeft= "0";
           }

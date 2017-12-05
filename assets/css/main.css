@@ -3,7 +3,7 @@ body{ background: #e7e7e7; }
 .sidenav div.logo {border-bottom: 1px solid #cfcfca; margin: 0 18px;}
 .sidenav a { padding: 8px 8px 8px 32px; text-decoration: none; font-size: 25px; color: #818181; display: block; transition: 0.3s; position:relative;}
 .sidenav a:hover { color: #f1f1f1; }
-.sidenav .material-icons { position: absolute; margin-top: 6px; }
+.sidenav .material-icons, .fa-icons { position: absolute; margin-top: 6px; }
 .sidenav .menu a span { margin-left: 2rem;}
 
 #main { transition: margin-left .5s; margin-left: 260px; position:relative;}
@@ -60,3 +60,4 @@ body{ background: #e7e7e7; }
 .icon-success { color: #7AC29A; }
 .icon-danger { color: #DD0330; }
 .icon-info { color: #68B3C8; }
+.card .card-footer ul{ margin-bottom:0;}
