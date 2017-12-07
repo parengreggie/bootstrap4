@@ -61,3 +61,22 @@ body{ background: #e7e7e7; }
 .icon-danger { color: #DD0330; }
 .icon-info { color: #68B3C8; }
 .card .card-footer ul{ margin-bottom:0;}
+
+.chartjs .card { position:relative;}
+
+
+
+.map-responsive{
+  overflow:hidden;
+  padding-bottom:50%;
+  position:relative;
+  margin: 20px;
+  height:0;
+}
+.map-responsive .map-wrapper{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
