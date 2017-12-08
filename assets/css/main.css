@@ -1,10 +1,11 @@
 body{ background: #e7e7e7; }
 .sidenav { height: 100%; width: 260px; position: fixed; z-index: 1; top: 0; left: 0; background-color: #312f2c; overflow-x: hidden; transition: 0.5s;}
 .sidenav div.logo {border-bottom: 1px solid #cfcfca; margin: 0 18px;}
-.sidenav div.logo a{font-size: 25px;}
+.sidenav div.logo a{font-size: 25px; margin: 5px 0;}
 .sidenav a { padding: 4px 8px 4px 32px; text-decoration: none; font-size: 16px; color: #818181; display: block; transition: 0.3s; position:relative;}
 .sidenav a:hover {background: rgba(160, 182, 160, 0.3); }
 .sidenav .material-icons, .fa-icons { position: absolute; margin-top: 2px; }
+.sidenav .menu {margin-top: 15px;}
 .sidenav .menu a span { margin-left: 1.5rem;}
 
 #main { transition: margin-left .5s; margin-left: 260px; position:relative;}
