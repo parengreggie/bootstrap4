@@ -4,8 +4,10 @@ body{ background: #e7e7e7; }
 .sidenav div.logo a{font-size: 25px; margin: 5px 0;}
 .sidenav a { padding: 4px 8px 4px 32px; text-decoration: none; font-size: 16px; color: #818181; display: block; transition: 0.3s; position:relative;}
 .sidenav a:hover {background: rgba(160, 182, 160, 0.3); }
-.sidenav .material-icons, .fa-icons { position: absolute; margin-top: 2px; }
+.sidenav .material-icons, .fa-icons { position: absolute; margin-top: 4px; }
 .sidenav .menu {margin-top: 15px;}
+.sidenav .menu ul {padding: 0;}
+.sidenav .menu ul li {list-style:none; padding: 0; margin:0;}
 .sidenav .menu a span { margin-left: 1.5rem;}
 
 #main { transition: margin-left .5s; margin-left: 260px; position:relative;}
@@ -62,12 +64,10 @@ body{ background: #e7e7e7; }
 .icon-success { color: #7AC29A; }
 .icon-danger { color: #DD0330; }
 .icon-info { color: #68B3C8; }
+.card {margin-bottom: 20px;}
 .card .card-footer ul{ margin-bottom:0;}
 
 .chartjs .card { position:relative;}
-
-
-
 .map-responsive{
   overflow:hidden;
   padding-bottom:50%;
@@ -82,3 +82,7 @@ body{ background: #e7e7e7; }
   width:100%;
   position:absolute;
 }
+
+.product .item button.add{ background: #ff4081; cursor: pointer;}
+.product .price label {color: #3f51b5; font-weight: bold;}
+.product .name label {font-size: 1.2rem; font-weight:bold;}
