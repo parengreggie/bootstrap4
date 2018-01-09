@@ -9,14 +9,84 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../assets/css/bootstrap.min.beta.3.css">
     <link href="../assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../assets/css/ionicons.min.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
 
   </head>
     <body>
-        <div class="container-fluid  no-horizontal-padding">
-            <nav class="navbar sticky-top navbar-light bg-light">
-                <a class="navbar-brand" href="#">Sticky top</a>
-            </nav>
-        </div>
+      <div class="r2-logo">
+        <a href=""><i class="icon ion-android-star-outline"></i> Raker 2</a>
+      </div>
+      <div class="r2-header">
+        <div class="r2-header-left">
+          <div class="navicon-left hidden-md-down"><a id="btnLeftMenu" href=""><i class="icon ion-navicon-round"></i></a></div>
+          <div class="navicon-left hidden-lg-up"><a id="btnLeftMenuMobile" href=""><i class="icon ion-navicon-round"></i></a></div>
+        </div><!-- r2-header-left -->
+        <div class="r2-header-right">
+          <nav class="nav">
+            <div class="dropdown">
+              <a href="" class="nav-link nav-link-profile" data-toggle="dropdown">
+                <span class="logged-name">Karl<span class="hidden-md-down"> Doe</span></span>
+                <img src="../assets/img/pakboikarl.jpg" class="wd-32 rounded-circle" alt="">
+              </a>
+              <div class="dropdown-menu dropdown-menu-header wd-200">
+                <ul class="list-unstyled user-profile-nav">
+                  <li><a href=""><i class="icon ion-ios-person-outline"></i> Edit Profile</a></li>
+                  <li><a href=""><i class="icon ion-ios-gear-outline"></i> Settings</a></li>
+                  <li><a href=""><i class="icon ion-ios-download-outline"></i> Downloads</a></li>
+                  <li><a href=""><i class="icon ion-ios-star-outline"></i> Favorites</a></li>
+                  <li><a href=""><i class="icon ion-ios-folder-outline"></i> Collections</a></li>
+                  <li><a href=""><i class="icon ion-power"></i> Sign Out</a></li>
+                </ul>
+              </div><!-- dropdown-menu -->
+            </div><!-- dropdown -->
+          </nav>
+          <div class="navicon-right">
+            <a id="btnRightMenu" href="" class="pos-relative">
+              <i class="icon ion-ios-bell-outline"></i>
+              <!-- start: if statement -->
+              <span class="square-8 bg-danger"></span>
+              <!-- end: if statement -->
+            </a>
+          </div><!-- navicon-right -->
+        </div><!-- r2-header-right -->
+      </div>
+
+      <script src="../assets/js/jquery-3.2.1.min.js"></script>
+      <script src="../assets/js/popper.js"></script>
+      <script src="../assets/js/bootstrap.4.min.js"></script>
+      <script>
+        'use strict';
+
+        $(document).ready(function(){
+          $('#btnLeftMenu').on('click', function(){
+            var menuText = $('.menu-item-label,.menu-item-arrow');
+
+            if($('body').hasClass('collapsed-menu')) {
+              $('body').removeClass('collapsed-menu');
+
+              // show current sub menu when reverting back from collapsed menu
+              $('.show-sub + .sl-menu-sub').slideDown();
+
+              $('.sl-sideleft').one('transitionend', function(e) {
+                menuText.removeClass('op-lg-0-force');
+                menuText.removeClass('d-lg-none');
+              });
+
+            } else {
+              $('body').addClass('collapsed-menu');
+
+              // hide toggled sub menu
+              $('.show-sub + .sl-menu-sub').slideUp();
+
+              menuText.addClass('op-lg-0-force');
+              $('.sl-sideleft').one('transitionend', function(e) {
+                menuText.addClass('d-lg-none');
+              });
+            }
+            return false;
+          });
+        });
+      </script>
     </body>
 </html>
